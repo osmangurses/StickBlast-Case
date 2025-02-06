@@ -50,7 +50,7 @@ public class TouchController : MonoBehaviour
 
             if (shapeCount == 3)
             {
-                ShapeSpawner.instance.Spawn();
+                ShapeSpawner.instance.Spawn(3);
                 shapeCount = 0;
             }
             obj.transform.DOScale(Vector3.zero,0.1f);

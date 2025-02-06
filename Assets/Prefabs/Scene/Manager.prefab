@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5290736139379052291}
   - component: {fileID: 3992955471726032385}
   - component: {fileID: 7362730712710387320}
+  - component: {fileID: 3738094504932849253}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -96,7 +97,7 @@ MonoBehaviour:
   - {fileID: 1638827832103730254, guid: d098bb2362237c9428fd930d0b293d0b, type: 3}
   - {fileID: 9120877967621315361, guid: 0a4a43f390966104d8fa158a9cc225ad, type: 3}
   - {fileID: 6123070858669573272, guid: 08f51b9dd1646e84a91d84525830ff84, type: 3}
-  shapeLists: []
+  shapeListContainer: {fileID: 0}
   spawnedShapes: []
   shapeList: {fileID: 11400000, guid: b7d664a71c971964d86f8d9746f16885, type: 2}
   positions:
@@ -150,3 +151,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cellPrefab: {fileID: 1120452788723545404, guid: 47fc7b3368e6b3c47857de165a6afea0, type: 3}
+--- !u!114 &3738094504932849253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6401204158044666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 134dbfb2e922a25478146f39c9c79025, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bomb_btn: {fileID: 0}
+  mix_btn: {fileID: 0}
+  sword_btn: {fileID: 0}
+  bombAmount: 1
+  mixAmount: 1
+  swordAmount: 1
+  selectedSkill: 1

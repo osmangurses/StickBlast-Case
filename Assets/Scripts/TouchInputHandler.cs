@@ -18,14 +18,21 @@ public class TouchInputHandler
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity, controller.targetLayer);
+            RaycastHit2D hitShape = Physics2D.GetRayIntersection(ray, Mathf.Infinity, controller.targetLayer);
+            RaycastHit2D hitCell = Physics2D.GetRayIntersection(ray, Mathf.Infinity, controller.cellLayer);
 
-            if (hit.collider != null)
+            if (hitShape.collider != null)
             {
-                selectedObject = hit.collider.gameObject;
+                selectedObject = hitShape.collider.gameObject;
                 selectedObject.GetComponent<Collider2D>().enabled = false;
                 lastPos = selectedObject.transform.position;
             }
+            if (hitCell.collider != null)
+            {
+                Cell targetCell = hitCell.collider.GetComponent<Cell>();
+                SkillManager.instance.UseSkill(targetCell);
+            }
+            SkillManager.instance.DeselectSkill();
         }
 
         if (Input.GetMouseButton(0) && selectedObject != null)

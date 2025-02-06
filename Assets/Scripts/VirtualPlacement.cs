@@ -8,6 +8,7 @@ public class VirtualPlacement : MonoBehaviour
     [SerializeField] GameObject cellPrefab;
     private Cell cell;
     private GameObject cellObject;
+    private Vector3 baseScale;
     private void Awake()
     {
         instance = this;
@@ -28,11 +29,12 @@ public class VirtualPlacement : MonoBehaviour
         activeColor.a = 0.7f;
         cell.activeStickColor = activeColor;
         cell._center.gameObject.SetActive(false);
+        baseScale = cell.transform.localScale;
         ReplaceVirtualCell();
     }
     public void PlaceVirtualCell(VirtualCell virtualCell)
     {
-        cellObject.transform.localScale = Vector3.one;
+        cellObject.transform.localScale = baseScale;
         cellObject.transform.position = virtualCell.position;
         cell.DeactivateDir(Direction.Up);
         cell.DeactivateDir(Direction.Down);

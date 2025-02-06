@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Cell : MonoBehaviour
 {
+    public SpriteRenderer skillVisual;
     public Color activeStickColor;
     public Color inactiveStickColor = Color.white;
     public bool up, down, right, left;
@@ -14,6 +15,7 @@ public class Cell : MonoBehaviour
     private CellDirectionHandler directionHandler;
     private CellEffectHandler effectHandler;
     private CellBlastHandler blastHandler;
+    private SkillType skill = SkillType.Null;
 
     private void Start()
     {
@@ -43,9 +45,22 @@ public class Cell : MonoBehaviour
         effectHandler.ResetCenterEffect();
         allDirActivated = false;
     }
-
+    public void AddSkill()
+    {
+        SkillType[] skillValues = (SkillType[])System.Enum.GetValues(typeof(SkillType));
+        SkillType randomSkill = skillValues[Random.Range(1, skillValues.Length)];
+        while (randomSkill==SkillType.Null)
+        {
+            randomSkill = skillValues[Random.Range(1, skillValues.Length)];
+        }
+        skill = randomSkill;
+        skillVisual.sprite = SkillManager.instance.GetSpriteOfSkill(skill);
+        skillVisual.gameObject.SetActive(true);
+    }
     public void Deactivate()
     {
+        SkillManager.instance.AddSkill(skill);
+        skillVisual.gameObject.SetActive(false);
         directionHandler.DeactivateAll();
         effectHandler.ResetEffects();
         blastHandler.HandleDeactivation();
