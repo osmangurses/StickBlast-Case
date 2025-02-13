@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd6b7b95b9e7247419178ba10bd815ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cellPrefab: {fileID: 1120452788723545404, guid: 47fc7b3368e6b3c47857de165a6afea0, type: 3}
+  cellPrefab: {fileID: 1120452788723545404, guid: 96c09a90ff5193340997d3632b373bb1, type: 3}
 --- !u!114 &3738094504932849253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,3 +170,10 @@ MonoBehaviour:
   mixAmount: 1
   swordAmount: 1
   selectedSkill: 1
+  skillObject: {fileID: 0}
+  bombSprite: {fileID: 0}
+  mixSprite: {fileID: 0}
+  swordSprite: {fileID: 0}
+  bombAmount_tmp: {fileID: 0}
+  mixAmount_tmp: {fileID: 0}
+  swordAmount_tmp: {fileID: 0}

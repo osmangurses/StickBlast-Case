@@ -34,6 +34,7 @@ public class VirtualPlacement : MonoBehaviour
     }
     public void PlaceVirtualCell(VirtualCell virtualCell)
     {
+        cell.up = cell.down = cell.left = cell.right = false;
         cellObject.transform.localScale = baseScale;
         cellObject.transform.position = virtualCell.position;
         cell.DeactivateDir(Direction.Up);
@@ -45,6 +46,7 @@ public class VirtualPlacement : MonoBehaviour
     public void ReplaceVirtualCell()
     {
         cellObject.transform.localScale = Vector3.zero;
+        cell.up = cell.down = cell.left = cell.right = false;
     }
 }
 public class VirtualCell
