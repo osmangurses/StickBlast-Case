@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1120452788723545404, guid: 47fc7b3368e6b3c47857de165a6afea0, type: 3}
-  columns: 4
-  rows: 4
+  columns: 3
+  rows: 3
   cellSize: {x: 0.8333333, y: 0.8333333}
   spacing: {x: 0, y: 0}
   startCorner: 4

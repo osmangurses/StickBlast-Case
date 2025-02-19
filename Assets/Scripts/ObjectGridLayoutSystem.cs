@@ -28,7 +28,15 @@ public class ObjectGridLayoutSystem : MonoBehaviour
 
     [Header("Generated Grid (Read-Only)")]
     public GameObject[,] gridObjects;
-
+    private void Awake()
+    {
+        columns = PlayerPrefs.GetInt("GridSizeX");
+        rows = PlayerPrefs.GetInt("GridSizeY");
+        float sizeMultiplier = (4f / Mathf.Max(rows, columns));
+        Debug.Log($"Size Multiplier = {sizeMultiplier}");
+        transform.localScale = Vector3.one * sizeMultiplier;
+        cellSize = Vector2.one * sizeMultiplier * 0.8333333f;
+    }
     void Start()
     {
         GenerateGrid();

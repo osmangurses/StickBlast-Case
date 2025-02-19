@@ -55,44 +55,22 @@ public class CellEffectHandler
             stick.color = isActive ? cell.activeStickColor : cell.inactiveStickColor;
         }
     }
+    void SetCornerState(bool condition, Corner corner)
+    {
+        if (condition)
+            corner.SetCronerActive();
+        else
+            corner.SetCronerInActive();
+    }
+
 
     public void UpdateCorner()
     {
-        if (cell.up || cell.left)
-        {
-            upperLeftCorner.SetCronerActive();
-        }
-        else
-        {
-            upperLeftCorner.SetCronerInActive();
-        }
 
-        if (cell.up || cell.right)
-        {
-            upperRightCorner.SetCronerActive();
-        }
-        else
-        {
-            upperRightCorner.SetCronerInActive();
-        }
-
-        if (cell.down || cell.left)
-        {
-            lowerLeftCorner.SetCronerActive();
-        }
-        else
-        {
-            lowerLeftCorner.SetCronerInActive();
-        }
-
-        if (cell.down || cell.right)
-        {
-            lowerRightCorner.SetCronerActive();
-        }
-        else
-        {
-            lowerRightCorner.SetCronerInActive();
-        }
+        SetCornerState(cell.up || cell.left, upperLeftCorner);
+        SetCornerState(cell.up || cell.right, upperRightCorner);
+        SetCornerState(cell.down || cell.left, lowerLeftCorner);
+        SetCornerState(cell.down || cell.right, lowerRightCorner);
 
         RunDelayedCheckNeighborCorner();
     }

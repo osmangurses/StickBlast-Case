@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3992955471726032385}
   - component: {fileID: 7362730712710387320}
   - component: {fileID: 3738094504932849253}
+  - component: {fileID: 907676988920537312}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -151,6 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cellPrefab: {fileID: 1120452788723545404, guid: 96c09a90ff5193340997d3632b373bb1, type: 3}
+  cellObject: {fileID: 0}
 --- !u!114 &3738094504932849253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,3 +179,26 @@ MonoBehaviour:
   bombAmount_tmp: {fileID: 0}
   mixAmount_tmp: {fileID: 0}
   swordAmount_tmp: {fileID: 0}
+--- !u!114 &907676988920537312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6401204158044666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2c2abe62c73dfe439e4957eedd3472c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shapePrefabs:
+  - {fileID: 2871816494982567374, guid: b461c0900367113419fc6cd686e4730a, type: 3}
+  - {fileID: 2293189178429650169, guid: a245d71fa4e448442b568b11dd0871a7, type: 3}
+  - {fileID: 3430685422420689920, guid: 42d7d32dde9f6524bb30a00cd33189bb, type: 3}
+  - {fileID: 3972905561294682434, guid: 06f97acbc8f64bd48b50388710036627, type: 3}
+  - {fileID: 4720070380803681842, guid: 3f550e972fb33384cbb262716015b62f, type: 3}
+  - {fileID: 7172618945742370115, guid: 6983ef275dd017a46a1271738f3d089f, type: 3}
+  - {fileID: 6690821925862787381, guid: fbf75234668ee2641aeaa1dc31b3b7fb, type: 3}
+  - {fileID: 1638827832103730254, guid: d098bb2362237c9428fd930d0b293d0b, type: 3}
+  - {fileID: 9120877967621315361, guid: 0a4a43f390966104d8fa158a9cc225ad, type: 3}
+  - {fileID: 6123070858669573272, guid: 08f51b9dd1646e84a91d84525830ff84, type: 3}

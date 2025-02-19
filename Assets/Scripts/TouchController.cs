@@ -53,8 +53,8 @@ public class TouchController : MonoBehaviour
                 ShapeSpawner.instance.Spawn(3);
                 shapeCount = 0;
             }
-            obj.transform.DOScale(Vector3.zero,0.1f);
-            Destroy(obj,0.3f);
+            ShapePool.instance.Destroy(obj);
+            obj.GetComponent<Collider2D>().enabled = true;
             StartCoroutine(CheckAndReload());
             ActionEvents.InvokeShapePlaced();
             return true;

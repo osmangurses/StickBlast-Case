@@ -30,7 +30,7 @@ public class Cell : MonoBehaviour
     {
         Vector2Int cellPos = GetCellPosition();
         var targetCellPos = cellPos + offset;
-        if (targetCellPos.x<0|| targetCellPos.x>=gridSystem.rows || targetCellPos.y < 0 || targetCellPos.y >= gridSystem.columns) { return null; }
+        if (targetCellPos.x<0|| targetCellPos.x>=gridSystem.columns || targetCellPos.y < 0 || targetCellPos.y >= gridSystem.rows) { return null; }
         return gridSystem.gridObjects[targetCellPos.x, targetCellPos.y].GetComponent<Cell>();
 
     }
@@ -88,9 +88,9 @@ public class Cell : MonoBehaviour
 
     private IEnumerator DelayedDeactivation()
     {
-        yield return new WaitForSeconds(0.011f);
-        effectHandler.ResetEffects();
+        yield return new WaitForSeconds(0.11f);
         blastHandler.HandleDeactivation();
+        effectHandler.ResetEffects();
     }
 
     public void CheckCorner()

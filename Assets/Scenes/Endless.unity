@@ -708,9 +708,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1324232184}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -400}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 600}
   m_SizeDelta: {x: 400, y: 150}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &2133307907
@@ -822,6 +822,30 @@ PrefabInstance:
       propertyPath: m_text
       value: FAILED
       objectReference: {fileID: 0}
+    - target: {fileID: 362401364439356902, guid: 7128f6565c5971145a06553135cd7ce2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 362401364439356902, guid: 7128f6565c5971145a06553135cd7ce2, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 362401364439356902, guid: 7128f6565c5971145a06553135cd7ce2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 362401364439356902, guid: 7128f6565c5971145a06553135cd7ce2, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 362401364439356902, guid: 7128f6565c5971145a06553135cd7ce2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 362401364439356902, guid: 7128f6565c5971145a06553135cd7ce2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1260952726393442858, guid: 7128f6565c5971145a06553135cd7ce2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -840,6 +864,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5626761944740909934, guid: 7128f6565c5971145a06553135cd7ce2, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5956586251625746172, guid: 7128f6565c5971145a06553135cd7ce2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5956586251625746172, guid: 7128f6565c5971145a06553135cd7ce2, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5956586251625746172, guid: 7128f6565c5971145a06553135cd7ce2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5956586251625746172, guid: 7128f6565c5971145a06553135cd7ce2, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5956586251625746172, guid: 7128f6565c5971145a06553135cd7ce2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5956586251625746172, guid: 7128f6565c5971145a06553135cd7ce2, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6413902481591314287, guid: 7128f6565c5971145a06553135cd7ce2, type: 3}
@@ -861,6 +909,30 @@ PrefabInstance:
     - target: {fileID: 6531223378147944248, guid: 7128f6565c5971145a06553135cd7ce2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: EndlessManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6863847390602804094, guid: 7128f6565c5971145a06553135cd7ce2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6863847390602804094, guid: 7128f6565c5971145a06553135cd7ce2, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6863847390602804094, guid: 7128f6565c5971145a06553135cd7ce2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6863847390602804094, guid: 7128f6565c5971145a06553135cd7ce2, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6863847390602804094, guid: 7128f6565c5971145a06553135cd7ce2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6863847390602804094, guid: 7128f6565c5971145a06553135cd7ce2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6875745359396852065, guid: 7128f6565c5971145a06553135cd7ce2, type: 3}
       propertyPath: m_Pivot.x
@@ -1132,6 +1204,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3950513373066758733, guid: 9b690c97388593348b3e1728da4c67da, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3950513373066758733, guid: 9b690c97388593348b3e1728da4c67da, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3950513373066758733, guid: 9b690c97388593348b3e1728da4c67da, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6280722050407970530, guid: 9b690c97388593348b3e1728da4c67da, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -1143,6 +1227,10 @@ PrefabInstance:
     - target: {fileID: 6280722050407970530, guid: 9b690c97388593348b3e1728da4c67da, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305076628994630838, guid: 9b690c97388593348b3e1728da4c67da, type: 3}
+      propertyPath: rows
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7305076628994630838, guid: 9b690c97388593348b3e1728da4c67da, type: 3}
       propertyPath: cellSize.x

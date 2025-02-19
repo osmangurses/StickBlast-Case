@@ -64,7 +64,7 @@ public class ShapeSpawner : MonoBehaviour
                     order++;
                 }
 
-                var spawnedShape = Instantiate(selectedShape, positions[i]);
+                var spawnedShape = ShapePool.instance.Instantiate(selectedShape.name, positions[i]);
                 spawnedShape.transform.localScale = Vector3.zero;
                 spawnedShape.transform.DOScale(Vector3.one,0.3f);
                 spawnedShapes.Add(spawnedShape);
@@ -91,7 +91,7 @@ public class ShapeSpawner : MonoBehaviour
             if (spawnedShape!=null)
             {
                 currentShapeCount++;
-                spawnedShape.transform.DOScale(Vector3.zero,0.1f).OnComplete(()=>Destroy(spawnedShape));
+                spawnedShape.transform.DOScale(Vector3.zero,0.1f).OnComplete(()=>ShapePool.instance.Destroy(spawnedShape));
             }
         }
         bool tempIsRandom = isRandom;

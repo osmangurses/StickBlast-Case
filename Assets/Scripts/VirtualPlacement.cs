@@ -7,7 +7,7 @@ public class VirtualPlacement : MonoBehaviour
     public static VirtualPlacement instance;
     [SerializeField] GameObject cellPrefab;
     private Cell cell;
-    private GameObject cellObject;
+    public GameObject cellObject;
     private Vector3 baseScale;
     private void Awake()
     {
@@ -25,11 +25,12 @@ public class VirtualPlacement : MonoBehaviour
             }
         }
         cellObject.GetComponent<BoxCollider2D>().enabled = false;
+        baseScale = TouchController.instance.gridSystem.cellSize.x *Vector3.one;
         Color activeColor = cell.activeStickColor;
         activeColor.a = 0.7f;
         cell.activeStickColor = activeColor;
         cell._center.gameObject.SetActive(false);
-        baseScale = cell.transform.localScale;
+        //baseScale = cell.transform.localScale;
         ReplaceVirtualCell();
     }
     public void PlaceVirtualCell(VirtualCell virtualCell)
@@ -47,6 +48,7 @@ public class VirtualPlacement : MonoBehaviour
     {
         cellObject.transform.localScale = Vector3.zero;
         cell.up = cell.down = cell.left = cell.right = false;
+        cellObject.transform.position = Vector3.one * 999;
     }
 }
 public class VirtualCell

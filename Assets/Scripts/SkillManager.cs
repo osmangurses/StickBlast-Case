@@ -50,56 +50,54 @@ public class SkillManager : MonoBehaviour
     }
     public void UseSkill(Cell targetCell)
     {
-        if (selectedSkill==SkillType.Null)
+        switch (selectedSkill)
         {
-            return;
-        }
-        else if (selectedSkill==SkillType.Bomb)
-        {
-            UseBomb(targetCell);
-        }
-        else if (selectedSkill==SkillType.Sword)
-        {
-            UseSword(targetCell);
-        }
-        else if (selectedSkill==SkillType.Mix)
-        {
-            UseMix();
+            case SkillType.Null:
+                return;
+            case SkillType.Bomb:
+                UseBomb(targetCell);
+                break;
+            case SkillType.Sword:
+                UseSword(targetCell);
+                break;
+            case SkillType.Mix:
+                UseMix();
+                break;
         }
         selectedSkill = SkillType.Null;
         UpdateAmountOnUI();
     }
+
     public void AddSkill(SkillType type)
     {
-        if (type==SkillType.Bomb)
+        switch (type)
         {
-            bombAmount++;
-        }
-        else if (type==SkillType.Sword)
-        {
-            swordAmount++;
-        }
-        else if (type==SkillType.Mix)
-        {
-            mixAmount++;
+            case SkillType.Bomb:
+                bombAmount++;
+                break;
+            case SkillType.Sword:
+                swordAmount++;
+                break;
+            case SkillType.Mix:
+                mixAmount++;
+                break;
         }
         UpdateAmountOnUI();
     }
+
     public Sprite GetSpriteOfSkill(SkillType type)
     {
-        if (type == SkillType.Bomb)
+        switch (type)
         {
-            return bombSprite;
-        }
-        else if (type == SkillType.Sword)
-        {
-            return swordSprite;
-        }
-        else
-        {
-            return mixSprite;
+            case SkillType.Bomb:
+                return bombSprite;
+            case SkillType.Sword:
+                return swordSprite;
+            default:
+                return mixSprite;
         }
     }
+
     void UpdateAmountOnUI()
     {
         bombAmount_tmp.text = "x" + bombAmount.ToString();

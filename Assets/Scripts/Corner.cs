@@ -9,16 +9,18 @@ public class Corner : MonoBehaviour
     public Color activeCornerColor;
     public Color inactiveCornerColor = Color.white;
     SpriteRenderer _spriteRenderer;
-    private void Awake()
+    [SerializeField]GameObject tempCorner;
+    private void Start()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
+
     }
 
     public void SetCronerActive()
     {
         if (!isActive && gameObject.activeSelf)
         {
-            _spriteRenderer.color = activeCornerColor;
+            tempCorner.transform.DOScale(transform.localScale, 0.2f).SetEase(Ease.OutBounce).OnComplete(() =>_spriteRenderer.color = activeCornerColor);
             isActive = true;
         }
     }
@@ -26,7 +28,7 @@ public class Corner : MonoBehaviour
     {
         if (isActive && gameObject.activeSelf)
         {
-            _spriteRenderer.color = inactiveCornerColor;
+            tempCorner.transform.DOScale(Vector3.zero, 0.2f).SetEase(Ease.OutBounce).OnComplete(() => _spriteRenderer.color = inactiveCornerColor);
             isActive = false;
         }
     }
